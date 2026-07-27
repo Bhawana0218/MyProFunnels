@@ -6,7 +6,7 @@ const funnelPath = "M 10 0 Q 10 0, 40 0 L 160 0 Q 190 0, 190 0 L 190 0 Q 190 0, 
 
 export function FunnelMobile() {
   return (
-    <div className="md:hidden flex justify-center items-center w-full h-[220px] mt-8 mb-4 relative z-0 overflow-hidden">
+    <div className="md:hidden flex justify-center items-center w-full h-[180px] mt-2 mb-0 relative z-0 overflow-hidden">
       {/* Ambient glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[280px] h-[280px] rounded-full bg-[var(--color-teal)]/[0.06] blur-[80px]" />
 

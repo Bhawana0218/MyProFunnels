@@ -39,13 +39,13 @@ export function Navbar() {
             : 'py-5 md:py-7 bg-transparent'
         }`}
       >
-        <div className="max-w-[1200px] mx-auto px-5 md:px-20 flex justify-between items-center">
+        <div className="max-w-[1200px] mx-auto px-5 md:px-20 flex justify-end md:justify-between items-center">
           {/* Logo */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-            className="text-[20px] md:text-[22px] font-bold font-display tracking-tight cursor-pointer select-none"
+            className="hidden md:block text-[20px] md:text-[22px] font-bold font-display tracking-tight cursor-pointer select-none"
           >
             My<span className="gradient-text-teal">Pro</span>Funnels
           </motion.div>
@@ -84,7 +84,7 @@ export function Navbar() {
           {/* Hamburger */}
           <button
             onClick={() => setMobileOpen((o) => !o)}
-            className="md:hidden relative w-[44px] h-[44px] flex items-center justify-center bg-transparent border-none cursor-pointer z-[110]"
+            className="md:hidden ml-auto relative w-[44px] h-[44px] flex items-center justify-center bg-transparent border-none cursor-pointer z-[110]"
             aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
           >
             <span className="flex flex-col justify-center items-center w-[22px] h-[16px]">

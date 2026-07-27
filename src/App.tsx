@@ -18,7 +18,7 @@ function App() {
       <ScrollProgress />
       <ParticleStream />
       <Navbar />
-     <div className='my-20'>
+
       <main>
         <HeroSection />
         <ProblemSection />
@@ -29,7 +29,6 @@ function App() {
         <TestimonialsSection />
         <FinalCTASection />
       </main>
-      </div>
       <Footer />
     </>
   )
