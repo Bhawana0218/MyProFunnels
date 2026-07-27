@@ -15,7 +15,7 @@ function CameraRig() {
   })
 
   return (
-    <group ref={group} position={[1.2, 0, 0]}>
+    <group ref={group}>
       <GlassFunnel />
       <ParticleFlow />
     </group>
@@ -24,8 +24,8 @@ function CameraRig() {
 
 export function FunnelScene() {
   return (
-    <div className="w-full h-[480px] lg:h-[600px] pointer-events-none hidden md:flex items-center justify-end pr-[32px] opacity-90">
-      <Canvas frameloop="always" camera={{ position: [1.5, 0, 8], fov: 45 }}>
+    <div className="w-full h-[400px] lg:h-[520px] pointer-events-none hidden md:flex items-center justify-center opacity-90">
+      <Canvas frameloop="always" camera={{ position: [0, 0, 8], fov: 45 }}>
         <ambientLight intensity={0.35} />
         <spotLight position={[5, 5, 5]} intensity={2} color="#00E28A" />
         <spotLight position={[-5, -5, -5]} intensity={1.2} color="#8B7CF6" />

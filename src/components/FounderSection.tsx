@@ -65,25 +65,25 @@ export function FounderSection() {
           </p>
 
           {/* Stats row with proper vertical rhythm */}
-          <div className="grid grid-cols-3 gap-[32px] pt-[32px] border-t border-white/[0.06]" ref={countFunnels.ref}>
+          <div className="grid grid-cols-3 gap-[12px] md:gap-[32px] pt-[32px] border-t border-white/[0.06]" ref={countFunnels.ref}>
             <div>
-              <div className="text-3xl md:text-4xl font-bold font-display stat-value mb-[8px]">
+              <div className="text-2xl md:text-4xl font-bold font-display stat-value mb-[8px]">
                 {countFunnels.count}+
               </div>
-              <div className="text-[11px] text-[var(--color-body-dim)] uppercase tracking-wider font-medium leading-tight">Funnels Built</div>
+              <div className="text-[10px] md:text-[11px] text-[var(--color-body-dim)] uppercase tracking-wider font-medium leading-tight">Funnels Built</div>
             </div>
             <div>
-              <div className="text-3xl md:text-4xl font-bold font-display stat-value mb-[8px]">
+              <div className="text-2xl md:text-4xl font-bold font-display stat-value mb-[8px]">
                 {countClients.count}+
               </div>
-              <div className="text-[11px] text-[var(--color-body-dim)] uppercase tracking-wider font-medium leading-tight">Clients Served</div>
+              <div className="text-[10px] md:text-[11px] text-[var(--color-body-dim)] uppercase tracking-wider font-medium leading-tight">Clients Served</div>
             </div>
             <div>
-              <div className="text-3xl md:text-4xl font-bold font-display mb-[8px] flex items-baseline">
-                <span className="text-[var(--color-signal-green)] text-xl mr-[2px]">₹</span>
+              <div className="text-2xl md:text-4xl font-bold font-display mb-[8px] flex items-baseline">
+                <span className="text-[var(--color-signal-green)] text-lg md:text-xl mr-[2px]">₹</span>
                 <span className="stat-value">{countRevenue.count}Cr+</span>
               </div>
-              <div className="text-[11px] text-[var(--color-body-dim)] uppercase tracking-wider font-medium leading-tight">Revenue Generated</div>
+              <div className="text-[10px] md:text-[11px] text-[var(--color-body-dim)] uppercase tracking-wider font-medium leading-tight">Revenue Generated</div>
             </div>
           </div>
         </div>

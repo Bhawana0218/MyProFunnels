@@ -86,14 +86,17 @@ export function FeaturesSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-64px" }}
           transition={{ duration: 0.5 }}
-          className="mb-[48px]"
+          className="mb-[64px]"
         >
+          <div className="text-[var(--color-signal-green)] text-[13px] font-bold tracking-widest uppercase mb-[12px]">DFY Features</div>
           <div ref={heading.ref}>
             <h2 className={`text-4xl md:text-5xl font-bold font-display mb-[16px] tracking-[-0.02em] text-[var(--color-headline)] text-reveal ${heading.isRevealed ? 'revealed' : ''}`}>
               Everything You Need.<br />Nothing You Don't.
             </h2>
           </div>
-          <p className="text-[var(--color-body)] text-lg">The complete stack to scale your coaching or agency business.</p>
+          <p className="text-[var(--color-body)] text-lg leading-relaxed max-w-xl">
+            The complete stack to scale your coaching or agency business. We take care of everything from funnel architecture to automation logic.
+          </p>
         </motion.div>
 
         <motion.div

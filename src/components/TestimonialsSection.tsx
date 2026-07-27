@@ -12,15 +12,16 @@ export function TestimonialsSection() {
   const heading = useScrollReveal(0.4)
 
   return (
-    <section className="section-v relative z-10 overflow-hidden">
-      <div className="section-container mb-[48px]">
+    <section id="testimonials" className="section-v relative z-10 overflow-hidden">
+      <div className="section-container">
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-64px" }}
           transition={{ duration: 0.5 }}
-          className="text-center"
+          className="text-center mb-[40px]"
         >
+          <div className="text-[var(--color-signal-green)] text-[13px] font-bold tracking-widest uppercase mb-[12px]">Testimonials</div>
           <div ref={heading.ref}>
             <h2 className={`text-4xl md:text-5xl font-bold font-display tracking-[-0.02em] text-[var(--color-headline)] text-reveal ${heading.isRevealed ? 'revealed' : ''}`}>
               Real Results. Real People.
@@ -29,20 +30,22 @@ export function TestimonialsSection() {
         </motion.div>
       </div>
 
-      {/* Contained marquee — cards never clip viewport edge */}
       <div className="relative w-full overflow-hidden">
-        {/* Fade edges for seamless loop feel */}
-        <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-[var(--color-obsidian)] to-transparent z-10 pointer-events-none"></div>
-        <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-[var(--color-obsidian)] to-transparent z-10 pointer-events-none"></div>
+        <div className="absolute left-0 top-0 bottom-0 w-32 md:w-48 bg-gradient-to-r from-[var(--color-obsidian)] to-transparent z-10 pointer-events-none" />
+        <div className="absolute right-0 top-0 bottom-0 w-32 md:w-48 bg-gradient-to-l from-[var(--color-obsidian)] to-transparent z-10 pointer-events-none" />
 
         <div className="marquee-track py-[16px] px-[24px]">
           {[...testimonials, ...testimonials, ...testimonials].map((test, i) => (
-            <div key={i} className="glass-card p-[32px] w-[380px] shrink-0 flex flex-col justify-between">
+            <div key={i} className="glass-card p-[40px] w-[400px] shrink-0 flex flex-col justify-between">
               <div>
                 <div className="flex gap-[4px] mb-[20px] text-[var(--color-signal-green)] text-sm">
-                  ★★★★★
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
                 </div>
-                <p className="text-[var(--color-body)] mb-[24px] text-[15px] leading-relaxed">"{test.quote}"</p>
+                <p className="text-[var(--color-body)] mb-[24px] text-[15px] leading-relaxed">&ldquo;{test.quote}&rdquo;</p>
               </div>
               <div className="flex items-center gap-[16px]">
                 <div className="w-[44px] h-[44px] rounded-full bg-gradient-to-br from-[var(--color-graphite-light)] to-[var(--color-obsidian-lighter)] flex items-center justify-center text-sm font-bold text-[var(--color-headline)] border border-white/[0.06]">

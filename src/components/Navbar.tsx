@@ -1,6 +1,7 @@
 import { useScrollProgress } from '../hooks/useScrollProgress'
 import { useMagneticButton } from '../hooks/useMagneticButton'
 import { motion } from 'framer-motion'
+import { STRATEGY_CALL_URL } from '../constants'
 
 export function Navbar() {
   const { pastThreshold } = useScrollProgress(50)
@@ -17,7 +18,7 @@ export function Navbar() {
           <a href="#how-it-works" className="text-[var(--color-body)] hover:text-[var(--color-signal-green)] transition-colors duration-300">How It Works</a>
           <a href="#about" className="text-[var(--color-body)] hover:text-[var(--color-signal-green)] transition-colors duration-300">About</a>
           <motion.a
-            href="#contact"
+            href={STRATEGY_CALL_URL}
             ref={magnetic.ref}
             onMouseMove={magnetic.handleMouseMove}
             onMouseLeave={magnetic.handleMouseLeave}

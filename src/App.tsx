@@ -2,8 +2,9 @@ import { Navbar } from './components/Navbar'
 import { HeroSection } from './components/HeroSection'
 import { ProblemSection } from './components/ProblemSection'
 import { SolutionSection } from './components/SolutionSection'
-import { FeaturesSection } from './components/FeaturesSection'
-import { FounderSection } from './components/FounderSection'
+import { ScalingRoadmap } from './components/ScalingRoadmap'
+import { WhyUsSection } from './components/WhyUsSection'
+import { StatsSection } from './components/StatsSection'
 import { TestimonialsSection } from './components/TestimonialsSection'
 import { FinalCTASection } from './components/FinalCTASection'
 import { Footer } from './components/Footer'
@@ -19,8 +20,9 @@ function App() {
         <HeroSection />
         <ProblemSection />
         <SolutionSection />
-        <FeaturesSection />
-        <FounderSection />
+        <ScalingRoadmap />
+        <WhyUsSection />
+        <StatsSection />
         <TestimonialsSection />
         <FinalCTASection />
       </main>

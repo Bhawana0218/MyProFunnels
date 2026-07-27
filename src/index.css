@@ -176,13 +176,13 @@ body {
   .section-container { padding-left: 24px; padding-right: 24px; }
 }
 
-/* Section vertical: 128px desktop, 64px mobile — per spacing scale */
+/* Section vertical: 96px desktop, 56px mobile — uniform scale */
 .section-v {
-  padding-top: 128px;
-  padding-bottom: 128px;
+  padding-top: 96px;
+  padding-bottom: 96px;
 }
 @media (max-width: 768px) {
-  .section-v { padding-top: 64px; padding-bottom: 64px; }
+  .section-v { padding-top: 56px; padding-bottom: 56px; }
 }
 
 /* ─── Mobile Funnel ─── */
