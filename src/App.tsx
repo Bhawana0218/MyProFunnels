@@ -9,13 +9,16 @@ import { TestimonialsSection } from './components/TestimonialsSection'
 import { FinalCTASection } from './components/FinalCTASection'
 import { Footer } from './components/Footer'
 import { ParticleStream } from './components/ParticleStream'
+import { ScrollProgress } from './components/ScrollProgress'
 
 function App() {
   return (
     <>
       <div className="film-grain" />
+      <ScrollProgress />
       <ParticleStream />
       <Navbar />
+     <div className='my-20'>
       <main>
         <HeroSection />
         <ProblemSection />
@@ -26,6 +29,7 @@ function App() {
         <TestimonialsSection />
         <FinalCTASection />
       </main>
+      </div>
       <Footer />
     </>
   )

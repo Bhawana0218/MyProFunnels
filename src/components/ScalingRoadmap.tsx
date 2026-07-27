@@ -7,11 +7,11 @@ const steps = [
   { num: "03", title: "Smart Automation Setup", desc: "Connecting your CRM, WhatsApp, and Email for a fully automated, hands-off sales experience." },
   { num: "04", title: "High-Converting Landing Pages", desc: "Blazing-fast, beautiful landing pages built with behavioral psychology to maximize your conversions." },
   { num: "05", title: "Advanced Scaling Strategy", desc: "Data-driven techniques and weekly coaching to scale your monthly revenue to ₹10 Lakh and beyond." },
-  { num: "06", title: "Complete Done-For-You", desc: "Our expert team handles the entire technical setup and maintenance, so you focus solely on business growth." }
+  { num: "06", title: "Complete Done-For-You", desc: "Our expert team handles the entire technical setup and maintenance, so you focus solely on growth." },
 ]
 
 const stagger = { hidden: {}, visible: { transition: { staggerChildren: 0.08 } } }
-const fadeUp = { hidden: { opacity: 0, y: 24 }, visible: { opacity: 1, y: 0, transition: { duration: 0.4, ease: [0.22, 1, 0.36, 1] as const } } }
+const fadeUp = { hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1] as const } } }
 
 export function ScalingRoadmap() {
   const heading = useScrollReveal(0.4)
@@ -19,27 +19,27 @@ export function ScalingRoadmap() {
   return (
     <section id="roadmap" className="section-v relative z-10 overflow-hidden">
       <div className="section-container relative">
-        <div className="grid md:grid-cols-12 gap-[48px] items-start">
+        <div className="grid md:grid-cols-12 gap-[64px] items-start">
           <div className="md:col-span-5">
             <motion.div
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-64px" }}
-              transition={{ duration: 0.4 }}
+              transition={{ duration: 0.5 }}
             >
               <div className="eyebrow mb-[12px]">Your Growth Journey</div>
               <div ref={heading.ref}>
-                <h2 className={`text-4xl md:text-[48px] font-bold font-display mb-[40px] tracking-[-0.03em] text-[var(--color-headline)] text-reveal ${heading.isRevealed ? 'revealed' : ''}`}>
+                <h2 className={`text-4xl md:text-[48px] font-bold font-display mb-[24px] tracking-[-0.03em] text-[var(--color-headline)] text-reveal ${heading.isRevealed ? 'revealed' : ''}`}>
                   90-Day Scaling Roadmap
                 </h2>
               </div>
-              <p className="text-[var(--color-body)] text-[16px] leading-relaxed mb-[40px]">
-                While the pipeline above shows how our system works technically, this roadmap outlines your journey from onboarding to ₹10 Lakh/month — with our team handling every step.
+              <p className="text-[var(--color-body)] text-[16px] leading-relaxed mb-[32px]">
+                Your journey from onboarding to ₹10 Lakh/month — with our team handling every step.
               </p>
 
-              <div className="glass-card p-[24px] border-l-[3px] border-l-[var(--color-teal)]">
-                <p className="text-[var(--color-headline)] text-[15px] font-display font-semibold leading-relaxed">
-                  Every step is done-for-you. You focus on your business — we handle the tech, the funnels, and the growth engine.
+              <div className="p-[24px] border-l-[3px] border-l-[var(--color-teal)]/40">
+                <p className="text-[var(--color-body)] text-[15px] leading-relaxed">
+                  Every step is <span className="text-[var(--color-headline)] font-semibold">done-for-you</span>. You focus on your business — we handle the tech, the funnels, and the growth engine.
                 </p>
               </div>
             </motion.div>
@@ -51,18 +51,18 @@ export function ScalingRoadmap() {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, margin: "-64px" }}
-              className="grid grid-cols-1 sm:grid-cols-2 gap-[24px]"
+              className="grid grid-cols-1 sm:grid-cols-2 gap-[16px]"
             >
               {steps.map((step, i) => (
                 <motion.div
                   key={i}
                   variants={fadeUp}
-                  className={`glass-card p-[32px] relative overflow-hidden group ${i === 0 || i === 3 ? 'sm:col-span-2' : ''}`}
+                  className={`glass-card p-[28px] relative group ${i === 0 || i === 3 ? 'sm:col-span-2' : ''}`}
                 >
-                  <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-[var(--color-teal)] to-[var(--color-teal-dark)] opacity-20 group-hover:opacity-100 transition-opacity duration-500" />
-                  <div className="flex items-center gap-[16px] mb-[20px]">
-                    <span className="text-[32px] font-bold font-display gradient-text-teal opacity-60 group-hover:opacity-100 transition-opacity">{step.num}</span>
-                    <span className="text-[12px] text-[var(--color-body-dim)] font-medium uppercase tracking-[0.15em]">{step.title}</span>
+                  <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-[var(--color-teal)]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  <div className="flex items-baseline gap-[12px] mb-[12px]">
+                    <span className="text-[32px] font-bold font-display gradient-text-teal opacity-40 group-hover:opacity-80 transition-opacity">{step.num}</span>
+                    <h3 className="text-[16px] font-bold text-[var(--color-headline)] font-display">{step.title}</h3>
                   </div>
                   <p className="text-[var(--color-body)] text-[14px] leading-relaxed">{step.desc}</p>
                 </motion.div>
